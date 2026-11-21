@@ -1,0 +1,8 @@
+{
+  "mode": "real",
+  "n_each": 2000,
+  "refs": 8,
+  "seed": 0,
+  "reference": "central, config of E2__931ef4f2__s0, trained without any candidate patient",
+  "statistic": "-log(mean per-patient loss)"
+}

@@ -1,0 +1,9 @@
+11:55:26 E3__f6967f61__s2 dev=cuda features=['nih'] on_gpu=True head=film loss=bce_pw params=434062 train=5155 val=2887
+11:55:38 round   2 val mean5 AUROC 0.6913
+11:55:46 round   4 val mean5 AUROC 0.6810
+11:55:54 round   6 val mean5 AUROC 0.6785
+11:56:02 round   8 val mean5 AUROC 0.6776
+11:56:10 round  10 val mean5 AUROC 0.6739
+11:56:18 round  12 val mean5 AUROC 0.6729
+11:56:18 early stop at round 12 (best round 2)
+11:57:18 DONE E3__f6967f61__s2: VAL mean5 0.6913 CI [0.677, 0.707] | TEST 0.7508 | 123.2s

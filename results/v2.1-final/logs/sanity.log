@@ -1,0 +1,17 @@
+features ['nih', 'mimic_ch', 'pc']: (191027, 3, 1024) on_gpu=True
+[PASS] D1 path<->label alignment (10 rows by row_id) 
+[PASS] D2 patient ids parsed from Path 
+[PASS] D3 patient overlap = 0 (VAL / clients) []
+[PASS] D4 targets/masks in {0,1} and re-derivable from the CSV 
+[PASS] D5 label order 
+  D6 prevalence: {'No Fin': 0.09, 'Enlarg': 0.05, 'Cardio': 0.12, 'Lung O': 0.49, 'Lung L': 0.04, 'Edema': 0.32, 'Consol': 0.07, 'Pneumo': 0.09, 'Atelec': 0.31, 'Pleura': 0.01, 'Fractu': 0.04, 'Suppor': 0.56}
+[PASS] D6 no label at 0%/100% 
+[PASS] D7 features finite, non-constant per encoder 
+[PASS] L1 linear probe VAL mean-5 AUROC = 0.7593 (min 0.7)
+[PASS] L2 shuffled-label control ~0.5 and far below real labels shuffled 0.5490 (0.556, 0.531, 0.560; tol 0.1) real 0.7514 (margin >= 0.1)
+[PASS] L3 overfit 64 samples (loss < 0.05) final loss 0.0001
+[PASS] L4 1-epoch train/VAL AUROC above floor, small gap train 0.750 val 0.753
+  L5 VAL per-label AUROC: {'No Findi': 0.857, 'Enlarged': 0.598, 'Cardiome': 0.806, 'Lung Opa': 0.692, 'Lung Les': 0.716, 'Edema': 0.792, 'Consolid': 0.689, 'Pneumoni': 0.664, 'Atelecta': 0.659, 'Pneumoth': 0.769, 'Pleural ': 0.718, 'Fracture': 0.661, 'Support ': 0.753}
+[PASS] L5 no VAL per-label AUROC < 0.45 {}
+
+SANITY PASSED

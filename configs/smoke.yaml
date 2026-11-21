@@ -1,0 +1,13 @@
+# --smoke: tiny end-to-end check. Outputs go ONLY to cache/smoke and results/smoke; TEST is hard-disabled.
+cache_dir: cache/smoke
+splits_dir: cache/smoke/splits
+results_dir: results/smoke
+smoke_subset: {pool_patients: 1500, val_patients: 1000}
+partition: {K: 5, alpha: 0.5, min_patients: 150}
+extract: {encoders: [mimic_ch, pc], batch_size: 32, num_workers: 2, chunk: 256, amp: true}
+features: {encoders: [nih, mimic_ch, pc], on_gpu: auto}
+central: {epochs: 3, batch: 128}
+fl: {rounds: 3, local_steps: 10, batch: 128, eval_every: 1}
+dp: {batch: 64, lr: 0.1}
+eval: {bootstrap_val: 50}
+sanity: {shuffle_tol: 0.10, l2_margin: 0.05, e0_min_auc: 0.60, l4_min_auc: 0.60, l4_gap: 0.10}

@@ -1,0 +1,9 @@
+11:12:33 E8_upint8_dnfp16__d7aa95ed__s0 dev=cuda features=['nih'] on_gpu=True head=film loss=bce_pw params=434062 train=5155 val=2887
+11:12:40 round   2 val mean5 AUROC 0.6948
+11:12:44 round   4 val mean5 AUROC 0.6759
+11:12:48 round   6 val mean5 AUROC 0.6718
+11:12:52 round   8 val mean5 AUROC 0.6720
+11:12:56 round  10 val mean5 AUROC 0.6654
+11:12:59 round  12 val mean5 AUROC 0.6625
+11:12:59 early stop at round 12 (best round 2)
+11:13:28 DONE E8_upint8_dnfp16__d7aa95ed__s0: VAL mean5 0.6948 CI [0.679, 0.71] | TEST 0.7768 | 61.1s

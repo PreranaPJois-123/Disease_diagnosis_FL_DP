@@ -1,0 +1,8 @@
+# Scale ladder, medium: nih encoder, 15 rounds x 50 steps, 20k pool patients (~1/3 of the full data).
+cache_dir: cache/scale_medium
+splits_dir: cache/scale_medium/splits
+results_dir: results/scale_medium
+subset: {pool_patients: 20000, val_patients: 4000}
+partition: {K: 5, alpha: 0.5, min_patients: 1000}
+fl: {rounds: 15, local_steps: 50}
+features: {encoders: [nih]}

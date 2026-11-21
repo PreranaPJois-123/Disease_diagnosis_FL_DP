@@ -1,0 +1,11 @@
+{
+  "n_params": 1094030,
+  "mode_up": "fp32",
+  "mode_down": "fp32",
+  "rounds_run": 30,
+  "MB_up": 656.42745,
+  "MB_down": 656.42745,
+  "MB_total": 1312.8549,
+  "MB_fp32_same_rounds": 1312.836,
+  "saving_vs_fp32_pct": -0.0014396314543585476
+}

@@ -1,0 +1,8 @@
+# Scale ladder, small: same protocol as scale_medium (nih encoder, 15 rounds x 50 steps), 2k pool patients.
+cache_dir: cache/scale_small
+splits_dir: cache/scale_small/splits
+results_dir: results/scale_small
+subset: {pool_patients: 2000, val_patients: 1000}
+partition: {K: 5, alpha: 0.5, min_patients: 150}
+fl: {rounds: 15, local_steps: 50}
+features: {encoders: [nih]}

@@ -1,0 +1,20 @@
+11:23:46 E2__09cd3f8d__s1 dev=cuda features=['nih'] on_gpu=True head=film loss=bce_pw params=434062 train=52803 val=11773
+11:23:49 epoch   1 train loss 0.8194 val mean5 AUROC 0.7236
+11:23:51 epoch   2 train loss 0.7992 val mean5 AUROC 0.7308
+11:23:53 epoch   3 train loss 0.7927 val mean5 AUROC 0.7333
+11:23:55 epoch   4 train loss 0.7882 val mean5 AUROC 0.7355
+11:23:57 epoch   5 train loss 0.7840 val mean5 AUROC 0.7352
+11:23:59 epoch   6 train loss 0.7780 val mean5 AUROC 0.7371
+11:24:00 epoch   7 train loss 0.7757 val mean5 AUROC 0.7401
+11:24:02 epoch   8 train loss 0.7701 val mean5 AUROC 0.7350
+11:24:03 epoch   9 train loss 0.7665 val mean5 AUROC 0.7403
+11:24:05 epoch  10 train loss 0.7621 val mean5 AUROC 0.7399
+11:24:06 epoch  11 train loss 0.7571 val mean5 AUROC 0.7379
+11:24:08 epoch  12 train loss 0.7527 val mean5 AUROC 0.7405
+11:24:09 epoch  13 train loss 0.7476 val mean5 AUROC 0.7381
+11:24:11 epoch  14 train loss 0.7439 val mean5 AUROC 0.7348
+11:24:12 epoch  15 train loss 0.7384 val mean5 AUROC 0.7350
+11:24:14 epoch  16 train loss 0.7335 val mean5 AUROC 0.7339
+11:24:16 epoch  17 train loss 0.7282 val mean5 AUROC 0.7316
+11:24:16 early stop at epoch 17 (best 12)
+11:24:56 DONE E2__09cd3f8d__s1: VAL mean5 0.7405 CI [0.735, 0.748] | TEST 0.8198 | 76.1s

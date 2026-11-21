@@ -1,0 +1,17 @@
+# Deployment requirements (CPU-only PyTorch keeps the image small)
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+torchvision==0.20.1+cpu
+torchxrayvision>=1.2
+opacus>=1.4
+numpy
+pandas
+pyarrow
+scikit-learn
+scikit-image
+pyyaml
+matplotlib
+tabulate
+streamlit>=1.40
+plotly>=5.20
+pillow

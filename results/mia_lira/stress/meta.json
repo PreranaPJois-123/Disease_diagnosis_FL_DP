@@ -1,0 +1,12 @@
+{
+  "mode": "stress",
+  "candidates": 600,
+  "shadows": 16,
+  "steps": 400,
+  "batch": 64,
+  "seed": 0,
+  "delta": 1e-05,
+  "head": "image_only, nih features",
+  "statistic": "-log(mean per-patient loss)",
+  "evaluation": "leave-one-out: each shadow is the target once"
+}

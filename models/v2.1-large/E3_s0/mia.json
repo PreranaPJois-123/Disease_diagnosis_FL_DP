@@ -1,0 +1,7 @@
+{
+  "mia_auc": 0.5065484049706626,
+  "advantage": 0.013096809941325116,
+  "n_patients_each": 6453,
+  "member_loss_mean": 0.7359951306806434,
+  "nonmember_loss_mean": 0.7449511346790189
+}

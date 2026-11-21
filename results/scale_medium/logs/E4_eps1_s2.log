@@ -1,0 +1,15 @@
+12:21:00 E4_eps1__37a096a2__s2 dev=cuda features=['nih'] on_gpu=True head=film loss=bce_pw params=434062 train=52803 val=11773
+12:21:01 client 0: units=5326 q=0.0481 sigma=5.066 planned_steps=750
+12:21:01 client 1: units=3741 q=0.0684 sigma=7.154 planned_steps=750
+12:21:01 client 2: units=3241 q=0.0790 sigma=8.244 planned_steps=750
+12:21:01 client 3: units=4343 q=0.0589 sigma=6.200 planned_steps=750
+12:21:01 client 4: units=1349 q=0.1898 sigma=19.683 planned_steps=750
+12:21:54 round   2 val mean5 AUROC 0.6448 eps_rdp_max 0.37 clipped 1.00
+12:22:44 round   4 val mean5 AUROC 0.6722 eps_rdp_max 0.54 clipped 1.00
+12:23:34 round   6 val mean5 AUROC 0.6752 eps_rdp_max 0.66 clipped 1.00
+12:24:26 round   8 val mean5 AUROC 0.6846 eps_rdp_max 0.77 clipped 1.00
+12:25:13 round  10 val mean5 AUROC 0.6786 eps_rdp_max 0.87 clipped 1.00
+12:25:59 round  12 val mean5 AUROC 0.6776 eps_rdp_max 0.96 clipped 1.00
+12:26:48 round  14 val mean5 AUROC 0.6865 eps_rdp_max 1.04 clipped 1.00
+12:27:15 round  15 val mean5 AUROC 0.6853 eps_rdp_max 1.08 clipped 1.00
+12:28:50 DONE E4_eps1__37a096a2__s2: VAL mean5 0.6865 CI [0.679, 0.693] | eps PRV 0.999 RDP 1.084 | TEST 0.7880 | 480.7s

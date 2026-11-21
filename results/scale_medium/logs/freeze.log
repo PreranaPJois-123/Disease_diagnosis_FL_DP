@@ -1,0 +1,4 @@
+  0.7014  E4_eps3_dpsweep_lr0.03__510bb1bf__s0
+  0.6958  E4_eps3_dpsweep_lr0.1__2b1aa631__s0
+  0.6868  E4_eps3_dpsweep_lr0.3__6f13ec2c__s0
+frozen dp: E4_eps3_dpsweep_lr0.03__510bb1bf__s0 (VAL 0.7014) -> D:\mp\results\scale_medium\frozen.yaml

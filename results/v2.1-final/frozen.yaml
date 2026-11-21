@@ -1,0 +1,21 @@
+features:
+  encoders:
+  - nih
+  - mimic_ch
+  - pc
+  on_gpu: auto
+model:
+  head: film
+  loss: bce_pw
+  ema: 0.999
+_selected:
+  model:
+    run: E2_trial_all_film_bce_pw_ema__12518cab__s0
+    val_mean5: 0.7702
+  dp:
+    run: E4_eps3_dpsweep_lr0.03_C1.0_B256__5b031192__s0
+    val_mean5: 0.7382
+dp:
+  lr: 0.03
+  clip: 1.0
+  batch: 256

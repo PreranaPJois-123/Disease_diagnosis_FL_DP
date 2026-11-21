@@ -1,0 +1,34 @@
+{
+  "temperature": {
+    "No Finding": 0.9512294245007141,
+    "Enlarged Cardiomediastinum": 0.33287108369807955,
+    "Cardiomegaly": 0.9512294245007141,
+    "Lung Opacity": 0.9512294245007141,
+    "Lung Lesion": 0.40656965974059917,
+    "Edema": 1.0,
+    "Consolidation": 0.6065306597126334,
+    "Pneumonia": 0.40656965974059917,
+    "Atelectasis": 1.1051709180756477,
+    "Pneumothorax": 1.0512710963760241,
+    "Pleural Effusion": 0.9512294245007141,
+    "Pleural Other": 0.4493289641172216,
+    "Fracture": 0.38674102345450123,
+    "Support Devices": 0.9048374180359597
+  },
+  "thresholds": {
+    "No Finding": 0.5076043327509858,
+    "Enlarged Cardiomediastinum": 0.19516279838980533,
+    "Cardiomegaly": 0.4440897737807145,
+    "Lung Opacity": 0.518004785150029,
+    "Lung Lesion": 0.07675780408685229,
+    "Edema": 0.4942581913727406,
+    "Consolidation": 0.43332523793113165,
+    "Pneumonia": 0.06137465435589289,
+    "Atelectasis": 0.493527374574329,
+    "Pneumothorax": 0.5141979042707329,
+    "Pleural Effusion": 0.49751100187949604,
+    "Pleural Other": 0.010687528845261564,
+    "Fracture": 0.08419157280342181,
+    "Support Devices": 0.5614484759211507
+  }
+}

@@ -1,0 +1,16 @@
+12:50:22 F1 reweighting on ['age', 'projection']: 11 groups, w in [0.20, 1.00] (<= 1)
+12:50:22 E7_eps3_F1__a43416a9__s2 dev=cuda features=['nih'] on_gpu=True head=film loss=bce_pw params=434062 train=52803 val=11773
+12:50:22 client 0: units=5326 q=0.0481 sigma=2.016 planned_steps=750
+12:50:22 client 1: units=3741 q=0.0684 sigma=2.759 planned_steps=750
+12:50:22 client 2: units=3241 q=0.0790 sigma=3.152 planned_steps=750
+12:50:22 client 3: units=4343 q=0.0589 sigma=2.410 planned_steps=750
+12:50:22 client 4: units=1349 q=0.1898 sigma=7.330 planned_steps=750
+12:50:49 round   2 val mean5 AUROC 0.6323 eps_rdp_max 1.16 clipped 0.39
+12:51:14 round   4 val mean5 AUROC 0.6669 eps_rdp_max 1.63 clipped 0.41
+12:51:40 round   6 val mean5 AUROC 0.6784 eps_rdp_max 2.01 clipped 0.40
+12:52:04 round   8 val mean5 AUROC 0.6826 eps_rdp_max 2.33 clipped 0.40
+12:52:27 round  10 val mean5 AUROC 0.6946 eps_rdp_max 2.62 clipped 0.45
+12:52:53 round  12 val mean5 AUROC 0.6964 eps_rdp_max 2.89 clipped 0.47
+12:53:18 round  14 val mean5 AUROC 0.6984 eps_rdp_max 3.14 clipped 0.46
+12:53:30 round  15 val mean5 AUROC 0.6990 eps_rdp_max 3.26 clipped 0.47
+12:54:16 DONE E7_eps3_F1__a43416a9__s2: VAL mean5 0.6990 CI [0.692, 0.706] | eps PRV 2.999 RDP 3.257 | TEST 0.7976 | 241.6s

@@ -1,0 +1,10 @@
+  0.7382  E4_eps3_dpsweep_lr0.03_C1.0_B256__5b031192__s0
+  0.7364  E4_eps3_dpsweep_lr0.03_C1.0_B512__08bf5b2d__s0
+  0.7362  E4_eps3_dpsweep_lr0.1_C0.5_B256__8a9f0cdb__s0
+  0.7336  E4_eps3_dpsweep_lr0.03_C0.5_B256__94a5147a__s0
+  0.7293  E4_eps3_dpsweep_lr0.1_C1.0_B512__351b5a9c__s0
+  0.7280  E4_eps3_dpsweep_lr0.3_C1.0_B512__6ff7ebef__s0
+  0.7260  E4_eps3_dpsweep_lr0.1_C1.0_B256__1d042a8f__s0
+  0.7241  E4_eps3_dpsweep_lr0.3_C0.5_B256__7423f502__s0
+  0.7232  E4_eps3_dpsweep_lr0.3_C1.0_B256__84f00c05__s0
+frozen dp: E4_eps3_dpsweep_lr0.03_C1.0_B256__5b031192__s0 (VAL 0.7382) -> D:\mp\results\v2.1-final\frozen.yaml

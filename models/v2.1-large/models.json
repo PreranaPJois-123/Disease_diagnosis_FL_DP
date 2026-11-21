@@ -1,0 +1,50 @@
+[
+ {
+  "model": "E4_eps3_s0",
+  "run_id": "E4_eps3__f716a7ae__s0",
+  "encoders": [
+   "nih",
+   "mimic_ch",
+   "pc"
+  ],
+  "val_mean5": 0.7381868793510734,
+  "test_mean5": 0.8224575280362683,
+  "eps_spent_prv": 2.9998919746492545
+ },
+ {
+  "model": "E3_s0",
+  "run_id": "E3__406f6a0e__s0",
+  "encoders": [
+   "nih",
+   "mimic_ch",
+   "pc"
+  ],
+  "val_mean5": 0.7584756946658906,
+  "test_mean5": 0.8430089079156607,
+  "eps_spent_prv": null
+ },
+ {
+  "model": "E2_s0",
+  "run_id": "E2__931ef4f2__s0",
+  "encoders": [
+   "nih",
+   "mimic_ch",
+   "pc"
+  ],
+  "val_mean5": 0.7702491001276386,
+  "test_mean5": 0.8408438690499075,
+  "eps_spent_prv": null
+ },
+ {
+  "model": "E1_s0",
+  "run_id": "E1__89354521__s0",
+  "encoders": [
+   "nih",
+   "mimic_ch",
+   "pc"
+  ],
+  "val_mean5": 0.7684606190035277,
+  "test_mean5": 0.8446031629249378,
+  "eps_spent_prv": null
+ }
+]

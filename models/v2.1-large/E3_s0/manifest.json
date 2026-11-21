@@ -1,0 +1,30 @@
+{
+  "run_id": "E3__406f6a0e__s0",
+  "tag": "E3",
+  "seed": 0,
+  "config_hash": "406f6a0e",
+  "smoke": false,
+  "status": "done",
+  "started": "2026-11-03T01:45:44",
+  "host": "pratheeth-laptop",
+  "versions": {
+    "python": "3.13.2",
+    "torch": "2.14.0+cu126",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torchxrayvision": "1.5.7",
+    "opacus": "1.5.4",
+    "numpy": "2.2.6",
+    "sklearn": "1.7.1",
+    "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU"
+  },
+  "encoders": [
+    "nih",
+    "mimic_ch",
+    "pc"
+  ],
+  "finished": "2026-11-03T01:46:51",
+  "wall_sec": 67.8,
+  "val_mean5": 0.7584756946658906,
+  "eps_spent_prv": null,
+  "test_mean5": 0.8430089079156607
+}

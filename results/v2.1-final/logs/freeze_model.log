@@ -1,0 +1,11 @@
+  0.7702  E2_trial_all_film_bce_pw_ema__12518cab__s0
+  0.7672  E2_trial_all_film_asl__c32e43bd__s0
+  0.7663  E2_trial_all_film_bce_pw__915c644c__s0
+  0.7630  E2_trial_all_linear_bce_pw__1c9a1c1f__s0
+  0.7615  E2_trial_all_linear_asl__546ffa38__s0
+  0.7515  E2_trial_nih_film_bce_pw_ema__83f3f06a__s0
+  0.7510  E2_trial_nih_film_asl__0d934643__s0
+  0.7494  E2_trial_nih_film_bce_pw__e05e11b0__s0
+  0.7416  E2_trial_nih_linear_bce_pw__8c2137b5__s0
+  0.7410  E2_trial_nih_linear_asl__2e801692__s0
+frozen model: E2_trial_all_film_bce_pw_ema__12518cab__s0 (VAL 0.7702) -> D:\mp\results\v2.1-final\frozen.yaml

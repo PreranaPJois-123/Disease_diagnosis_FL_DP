@@ -1,0 +1,9 @@
+{
+  "members": 300,
+  "steps": 400,
+  "seeds": 5,
+  "delta": 1e-05,
+  "attack": "loss threshold (patient mean loss)",
+  "nonmembers": "same number of held-out VAL patients",
+  "head": "image_only, nih features"
+}

@@ -1,0 +1,13 @@
+reference 0: 13 epochs, VAL 0.7683 (184s)
+reference 1: 14 epochs, VAL 0.7699 (146s)
+reference 2: 14 epochs, VAL 0.7706 (148s)
+reference 3: 16 epochs, VAL 0.7694 (165s)
+reference 4: 16 epochs, VAL 0.7695 (168s)
+reference 5: 14 epochs, VAL 0.7698 (143s)
+reference 6: 14 epochs, VAL 0.7697 (145s)
+reference 7: 14 epochs, VAL 0.7700 (134s)
+E2         loss AUC 0.520  LiRA AUC 0.684  TPR@1% 0.060
+E3         loss AUC 0.507  LiRA AUC 0.551  TPR@1% 0.017
+E4_eps8    loss AUC 0.496  LiRA AUC 0.495  TPR@1% 0.008
+E4_eps3    loss AUC 0.496  LiRA AUC 0.497  TPR@1% 0.007
+E4_eps1    loss AUC 0.496  LiRA AUC 0.495  TPR@1% 0.007

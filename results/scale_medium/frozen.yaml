@@ -1,0 +1,8 @@
+dp:
+  lr: 0.03
+  clip: 1.0
+  batch: 256
+_selected:
+  dp:
+    run: E4_eps3_dpsweep_lr0.03__510bb1bf__s0
+    val_mean5: 0.7014

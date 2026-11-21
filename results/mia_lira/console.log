@@ -1,0 +1,22 @@
+no DP (overfit)        VAL AUROC 0.651  best attack LiRA online: AUC 0.944 TPR@1% 0.426 TPR@0.1% 0.1491  (56s)
+no DP, early stopped   VAL AUROC 0.688  best attack LiRA online: AUC 0.689 TPR@1% 0.076 TPR@0.1% 0.0201  (49s)
+DP eps=8               VAL AUROC 0.668  best attack LiRA offline: AUC 0.634 TPR@1% 0.024 TPR@0.1% 0.0027  (409s)
+C:\Users\prath\AppData\Roaming\Python\Python313\site-packages\opacus\accountants\analysis\rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+DP eps=3               VAL AUROC 0.611  best attack LiRA offline: AUC 0.576 TPR@1% 0.017 TPR@0.1% 0.0015  (243s)
+C:\Users\prath\AppData\Roaming\Python\Python313\site-packages\opacus\accountants\analysis\rdp.py:332: UserWarning: Optimal order is the largest alpha. Please consider expanding the range of alphas to get a tighter privacy bound.
+  warnings.warn(
+DP eps=1               VAL AUROC 0.529  best attack LiRA offline: AUC 0.534 TPR@1% 0.010 TPR@0.1% 0.0002  (199s)
+reference 0: 13 epochs, VAL 0.7702 (180s)
+reference 1: 15 epochs, VAL 0.7700 (198s)
+reference 2: 14 epochs, VAL 0.7717 (199s)
+reference 3: 14 epochs, VAL 0.7697 (179s)
+reference 4: 15 epochs, VAL 0.7690 (158s)
+reference 5: 14 epochs, VAL 0.7702 (159s)
+reference 6: 14 epochs, VAL 0.7701 (159s)
+reference 7: 16 epochs, VAL 0.7696 (170s)
+E2         loss AUC 0.520  LiRA AUC 0.682  TPR@1% 0.066
+E3         loss AUC 0.507  LiRA AUC 0.552  TPR@1% 0.018
+E4_eps8    loss AUC 0.496  LiRA AUC 0.495  TPR@1% 0.008
+E4_eps3    loss AUC 0.496  LiRA AUC 0.497  TPR@1% 0.007
+E4_eps1    loss AUC 0.496  LiRA AUC 0.495  TPR@1% 0.008

@@ -1,0 +1,115 @@
+data_root: D:/mp
+cache_dir: D:\mp\cache
+splits_dir: D:\mp\splits
+results_dir: D:\mp\results\v2.1-final
+seed: 42
+device: auto
+subset_patients: null
+val_frac: 0.1
+local_val_frac: 0.1
+blank_as_negative: true
+uncertainty:
+  Atelectasis: ones
+  Edema: ones
+  Cardiomegaly: zeros
+  Consolidation: zeros
+  Pleural Effusion: zeros
+partition:
+  K: 5
+  alpha: 0.5
+  min_patients: 1500
+extract:
+  encoders:
+  - mimic_ch
+  - pc
+  batch_size: 64
+  num_workers: 4
+  chunk: 2048
+  amp: true
+features:
+  encoders:
+  - nih
+  - mimic_ch
+  - pc
+  on_gpu: auto
+model:
+  head: film
+  d: 256
+  p_drop: 0.2
+  p_modality_drop: 0.1
+  loss: bce_pw
+  asl:
+    gamma_neg: 4.0
+    gamma_pos: 0.0
+    clip: 0.05
+  ema: 0.999
+central:
+  epochs: 20
+  batch: 256
+  lr: 0.001
+  wd: 0.0001
+  patience: 5
+  amp: true
+fl:
+  rounds: 30
+  local_steps: 50
+  batch: 256
+  lr: 0.001
+  wd: 0.0001
+  server: fedavg
+  beta: 0.9
+  server_lr: 1.0
+  server_ema: 0.0
+  eval_every: 2
+  patience: 5
+  amp: true
+dp:
+  target_eps: 8.0
+  delta: 1.0e-05
+  clip: 1.0
+  max_images: 8
+  unit: patient
+  lr: 0.03
+  server: fedavgm
+  batch: 256
+  vmap_chunk: 256
+  accountant: prv
+eval:
+  bootstrap: 1000
+  bootstrap_val: 200
+  min_pos_test: 1
+  min_pos_val: 20
+  min_pos_group: 5
+sanity:
+  shuffle_tol: 0.07
+  l2_margin: 0.1
+  e0_min_auc: 0.7
+  l4_min_auc: 0.7
+  l4_gap: 0.05
+comm:
+  up: fp32
+  down: fp32
+  block: 1024
+  topk: 0.01
+fair:
+  method: none
+  attrs:
+  - age
+  - projection
+  wmin: 0.2
+  thr_attr: projection
+_selected:
+  model:
+    run: E2_trial_all_film_bce_pw_ema__12518cab__s0
+    val_mean5: 0.7702
+  dp:
+    run: E4_eps3_dpsweep_lr0.03_C1.0_B256__5b031192__s0
+    val_mean5: 0.7382
+smoke: false
+run:
+  exp: E2
+  seed: 0
+  eps: null
+  dp: false
+  unit: patient
+  final: true

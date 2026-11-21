@@ -1,0 +1,4 @@
+  0.6354  E4_eps3_dpsweep_lr0.03__22ac3ec9__s0
+  0.5697  E4_eps3_dpsweep_lr0.1__41e842b8__s0
+  0.5395  E4_eps3_dpsweep_lr0.3__83bdf7ca__s0
+frozen dp: E4_eps3_dpsweep_lr0.03__22ac3ec9__s0 (VAL 0.6354) -> D:\mp\results\scale_small\frozen.yaml

@@ -1,0 +1,16 @@
+2026-11-03 00:26:29 === night run start ===
+2026-11-03 00:26:29 start extract
+2026-11-03 00:43:55 ok extract
+2026-11-03 00:43:55 start sanity
+2026-11-03 00:45:20 ok sanity
+2026-11-03 00:59:59 start freeze_model
+2026-11-03 01:00:05 ok freeze_model
+2026-11-03 01:41:24 start freeze_dp
+2026-11-03 01:41:29 ok freeze_dp
+2026-11-03 04:51:41 start aggregate
+2026-11-03 04:51:53 ok aggregate
+2026-11-03 04:51:54 start compare_scales
+2026-11-03 04:51:56 ok compare_scales
+2026-11-03 04:51:56 start export_model
+2026-11-03 04:51:56 ok export_model
+2026-11-03 04:51:56 === night run end. failures: 0 ===
