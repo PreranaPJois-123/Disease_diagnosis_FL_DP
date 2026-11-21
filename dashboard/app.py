@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from dpmmfl.constants import COMP5, LABELS                      # noqa: E402
-from dpmmfl.serve import Predictor, discover_runs, live_mia     # noqa: E402
+from dpmmfl.runs import discover_runs                          # noqa: E402  (torch is imported lazily)
 
 st.set_page_config(page_title="DP-MMFL", layout="wide")
 
@@ -78,6 +78,7 @@ def runs_table():
 
 @st.cache_resource(show_spinner="Loading model…")
 def get_predictor(path):
+    from dpmmfl.serve import Predictor
     return Predictor(path)
 
 
@@ -388,6 +389,7 @@ with tab_priv:
             res = []
             for tg in picks:
                 with st.spinner(f"Attacking {NAMES[tg]}…"):
+                    from dpmmfl.serve import live_mia
                     res.append((tg, live_mia(r1[r1.tag == tg].iloc[0].path)))
             for col, (tg, r) in zip(st.columns(len(res)), res):
                 col.metric(NAMES[tg], f"AUC {r['auc']:.3f}", f"{100 * r['tpr1']:.1f}% found at 1% FPR", delta_color="off")
