@@ -6,7 +6,7 @@ on:
     branches: [main]
   workflow_dispatch:
 env:
-  SPACE_ID: ${{ vars.HF_SPACE || 'PreranaPJois/disease-diagnosis-fl-dp' }}
+  SPACE_NAME: disease-diagnosis-fl-dp   # becomes huggingface.co/spaces/<your-hf-username>/disease-diagnosis-fl-dp
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
           import os
           from huggingface_hub import HfApi
           api = HfApi(token=os.environ["HF_TOKEN"])
-          sid = os.environ["SPACE_ID"]
+          sid = api.whoami()["name"] + "/" + os.environ["SPACE_NAME"]
           api.create_repo(sid, repo_type="space", space_sdk="docker", exist_ok=True)
           api.upload_folder(folder_path=".", repo_id=sid, repo_type="space",
                             ignore_patterns=[".git/*", ".github/*", "deploy_hf/*"],
