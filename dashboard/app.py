@@ -114,10 +114,34 @@ rt = runs_table()
 st.title("DP-MMFL")
 st.caption("Chest X-ray classification with federated learning, patient-level differential privacy, compressed communication "
            "and a fairness audit. CheXpert, 14 findings.")
-tab_res, tab_pred, tab_priv, tab_about = st.tabs(["Results", "Predict", "Privacy", "About"])
+
+
+# ------------------------------------------------------------------ home
+def page_home():
+    st.subheader("Privacy-preserving AI for chest X-ray diagnosis")
+    st.markdown("Five simulated hospitals train one model together **without sharing any patient data**, and each patient is mathematically "
+                "protected inside the model (differential privacy). G67 major project, Phase 2.")
+    big = tabs.get("large (v2.1)")
+    if big is not None and len(big):
+        def g(name, col="test_mean5"):
+            return big.loc[name, col] if name in big.index else None
+        a, b, c, d = st.columns(4)
+        a.metric("Central model", fmt(g("Central, with metadata")), help="mean AUROC on the 5 CheXpert competition findings (TEST)")
+        b.metric("Federated (no DP)", fmt(g("FedAvg")))
+        c.metric("Federated + privacy (ε=3)", fmt(g("DP ε=3")))
+        d.metric("Patients / hospitals", "5 hospitals", help="Dirichlet α=0.5, patient-disjoint split")
+    st.markdown("""
+Use the pages on the left:
+- **Results**: accuracy by data scale, privacy vs accuracy, traffic saved, fairness, per-finding AUROC.
+- **Predict**: upload a chest X-ray, get 14 probabilities and a Grad-CAM heat-map from any trained model.
+- **Privacy**: run a membership-inference attack on a model with and without differential privacy.
+- **About**: method, limits and how to reproduce.
+""")
+    st.caption("Research prototype, not a medical device.")
+
 
 # ------------------------------------------------------------------ results
-with tab_res:
+def page_results():
     if not tabs:
         st.info("No results yet. Run the experiments, then `python scripts/aggregate.py`.")
     else:
@@ -203,7 +227,7 @@ with tab_res:
                 st.dataframe(d.round(4), use_container_width=True)
 
 # ------------------------------------------------------------------ predict
-with tab_pred:
+def page_predict():
     if not len(rt):
         st.info("No trained models found.")
     else:
@@ -310,7 +334,7 @@ with tab_pred:
         st.caption("Research prototype. Not for clinical use.")
 
 # ------------------------------------------------------------------ privacy
-with tab_priv:
+def page_privacy():
     st.markdown("A **membership-inference attack** guesses whether a patient was in the training data, using the fact that models "
                 "usually fit their training data better. An attack score (AUC) of **0.5 means it does no better than a coin flip**.")
     mia_dir = ROOT / "results" / "mia_demo"
@@ -401,7 +425,7 @@ with tab_priv:
                        "DP adds a guarantee that holds for any attack, including ones stronger than this.")
 
 # ------------------------------------------------------------------ about
-with tab_about:
+def page_about():
     st.markdown("""
 **Model.** A frozen DenseNet-121 (TorchXRayVision, trained on NIH data, never on CheXpert) turns each X-ray into a feature vector;
 a small classifier on top predicts 14 findings. Only the classifier is trained.
@@ -423,3 +447,12 @@ reveals provably little about any single patient. ε is the privacy budget: smal
 - Saved patient records stay in `demo/patient_records.jsonl` on this machine. Use de-identified data.
 - Research prototype, not a medical device.
 """)
+
+
+pages = [st.Page(page_home, title="Overview", icon="🏠", url_path="overview", default=True),
+         st.Page(page_results, title="Results", icon="📊", url_path="results"),
+         st.Page(page_predict, title="Predict", icon="🩻", url_path="predict"),
+         st.Page(page_privacy, title="Privacy attack", icon="🔒", url_path="privacy"),
+         st.Page(page_about, title="About", icon="ℹ️", url_path="about")]
+
+st.navigation(pages).run()
