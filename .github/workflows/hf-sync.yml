@@ -1,0 +1,33 @@
+# Copies this repo to the Hugging Face Space on every push to main.
+# Needs a repository secret HF_TOKEN (a Hugging Face token with write access).
+name: Deploy to Hugging Face Space
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+env:
+  SPACE_ID: ${{ vars.HF_SPACE || 'PreranaPJois/disease-diagnosis-fl-dp' }}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -q "huggingface_hub>=0.25"
+      - name: Upload to Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          cp deploy_hf/README.md README.md   # Spaces reads its config from README front matter
+          python - <<'PY'
+          import os
+          from huggingface_hub import HfApi
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          sid = os.environ["SPACE_ID"]
+          api.create_repo(sid, repo_type="space", space_sdk="docker", exist_ok=True)
+          api.upload_folder(folder_path=".", repo_id=sid, repo_type="space",
+                            ignore_patterns=[".git/*", ".github/*", "deploy_hf/*"],
+                            delete_patterns=["*"], commit_message="Sync from GitHub")
+          print("Deployed: https://huggingface.co/spaces/" + sid)
+          PY
